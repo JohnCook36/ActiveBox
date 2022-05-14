@@ -1,13 +1,23 @@
+:root {
+    --colorWhite: #ffffff;
+    --colorText: #6c7279;
+}
+
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif ;
     font-size: 14px;
-    color: #6c7279;
+    color: var(--colorText);
+    background-color: var(--colorText);
 }
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Container */
@@ -21,5 +31,36 @@ body {
 /* Header */
 
 .header {
-    
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: #515369 1px solid;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    margin-left: 50px;
+    color: var(--colorWhite);
+    opacity: .75;
+    transition: opacity .2s linear;
+}
+
+.nav__link:first-child{
+    margin-left: 0;
+}
+
+.nav__link:hover {
+    opacity: 1;
 }
