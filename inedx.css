@@ -5,6 +5,7 @@
     --colorBackgroundHeader: #31344e;
     --colorBackgroundButton: #e84545;
     --colorBackgroundButtonHover: #dd3434;
+    --colorPhotoHover: rgba(232, 69, 69, .9);
     --marginCenter: 0 auto;
 }
 
@@ -185,5 +186,60 @@ a {
     color: var(--colorText);
 }
 
+/* Works */
 
+.works {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    flex-wrap: wrap;
+}
 
+.works__item {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--colorPhotoHover);
+}
+
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+.works__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d( -50%, -50%, 0);
+}
+
+.works__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--colorPhotoHover);
+    opacity: 0;
+    transition: opacity .2s linear;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.work__content-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--colorWhite);
+    text-transform: uppercase;
+}
+
+.work__content-subtitle {
+    margin-top: 5px;
+    font-size: 14px;
+    color: var(--colorWhite);
+}
