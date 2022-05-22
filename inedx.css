@@ -4,6 +4,8 @@
     --colorTitle: #2d3033;
     --colorText: #6c7279;
     --colorBackgroundHeader: #31344e;
+    --colorBackgroundFooterCopywrite: #313454;
+    --colorBackgroundFooter: #3a3e64;
     --colorFacebook: #3b5998;
     --colorLinkedin: #0e76a8;
     --colorTwitter: #00acee;
@@ -309,6 +311,10 @@ a {
     border-radius: 3px;
 }
 
+.social__item:last-child {
+    margin-right: 0;
+}
+
 .social__item:hover {
     background-color: var(--colorBorder);
 }
@@ -384,6 +390,8 @@ a {
     text-transform: uppercase;
 }
 
+/* Download */
+
 .download {
     margin: 100px 0;
     display: flex;
@@ -412,4 +420,58 @@ a {
     font-size: 13px;
     line-height: 1.6;
     text-transform: uppercase;
+}
+
+/* Footer */
+
+.footer {
+    padding: 70px 0;
+    background-color: var(--colorBackgroundFooter);
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_block {
+    width: 33%;
+    padding: 0 15px;
+}
+
+.footer__title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--colorWhite);
+    text-transform: uppercase;
+}
+
+.footer__subtitle {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    padding: 20px 0;
+    background-color: var(--colorBackgroundFooterCopywrite);
+}
+
+.copyright__text {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.copyright__author {
+    color: var(--colorWhite);
 }
