@@ -383,3 +383,33 @@ a {
     color: var(--colorWhite);
     text-transform: uppercase;
 }
+
+.download {
+    margin: 100px 0;
+    display: flex;
+    text-align: center;
+}
+
+.download__title {
+    font-size: 28px;
+    line-height: .75;
+}
+
+.download__subtitle {
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.download__button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 18px 84px;
+    border-radius: 3px;
+    color: var(--colorWhite);
+    font-size: 13px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
