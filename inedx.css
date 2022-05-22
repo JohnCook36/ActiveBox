@@ -1,8 +1,12 @@
 :root {
     --colorWhite: #ffffff;
+    --colorBorder: #e8ecee;
     --colorTitle: #2d3033;
     --colorText: #6c7279;
     --colorBackgroundHeader: #31344e;
+    --colorFacebook: #3b5998;
+    --colorLinkedin: #0e76a8;
+    --colorTwitter: #00acee;
     --colorBackgroundButton: #e84545;
     --colorBackgroundButtonHover: #dd3434;
     --colorPhotoHover: rgba(232, 69, 69, .9);
@@ -242,4 +246,88 @@ a {
     margin-top: 5px;
     font-size: 14px;
     color: var(--colorWhite);
+}
+
+/* Team */
+
+.team {
+    margin: 100px 0;
+}
+
+.team__inner {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    width: 25%;
+}
+
+.team__photo {
+    width: 270px;
+    height: 270px;
+    background: #6c7279;
+}
+
+.team__title {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--colorTitle);
+}
+
+.team__place {
+    font-size: 13px;
+    color: var(--colorBackgroundButton);
+    text-transform: uppercase;
+}
+
+.team__subtitle {
+    margin: 20px 25px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+/* Social */
+.social {
+    display: flex;
+    margin-top: 15px;
+}
+
+.social__item {
+    display: flex;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color .2s linear;
+
+    border: 1px solid var(--colorBorder);
+    border-radius: 3px;
+}
+
+.social__item:hover {
+    background-color: var(--colorBorder);
+}
+
+.social__icon {
+    display: block;
+    height: 18px;
+    width: 18px;
+    fill: var(--colorBorder);
+    transition: fill .2s linear;
+}
+
+.social__item:hover .facebook {
+    fill: var(--colorFacebook);
+}
+
+.social__item:hover .linkedin {
+    fill: var(--colorLinkedin);
+}
+
+.social__item:hover .twitter {
+    fill: var(--colorTwitter);
 }
