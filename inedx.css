@@ -10,6 +10,7 @@
     --colorBackgroundButton: #e84545;
     --colorBackgroundButtonHover: #dd3434;
     --colorPhotoHover: rgba(232, 69, 69, .9);
+    --backgroundReviewsColor: #53354a;
     --marginCenter: 0 auto;
 }
 
@@ -330,4 +331,55 @@ a {
 
 .social__item:hover .twitter {
     fill: var(--colorTwitter);
+}
+
+/* Reviews */
+
+.reviews {
+    background-color: var(--backgroundReviewsColor);
+    overflow: hidden;
+}
+
+.reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.reviews__img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 3;
+
+    transform: translateY(-50%);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 85px;
+    width: 50%;
+}
+
+.reviews__text {
+    font-family: "Cardo", sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.16;
+    color: var(--colorWhite);
+}
+
+.reviews__sign {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--colorWhite);
+    text-transform: uppercase;
 }
