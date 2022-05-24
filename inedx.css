@@ -27,7 +27,6 @@ body {
 *:before,
 *:after {
     box-sizing: border-box;
-    cursor: default;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
@@ -48,6 +47,7 @@ a {
     width: 100%;
     max-width: 1170px;
     margin: var(--marginCenter);
+    padding: 0 15px;
 }
 
 /* Header */
@@ -118,13 +118,11 @@ a {
 }
 
 .intro__title {
-    margin: 0;
     color: var(--colorWhite);
     font-family: 'Open Sans', sans-serif;
     font-size: 65px;
     font-weight: 700;
     line-height: 1.1;
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -207,7 +205,6 @@ a {
     height: 350px;
     position: relative;
     overflow: hidden;
-    background-color: var(--colorPhotoHover);
 }
 
 .works__item:hover .works__content {
@@ -264,12 +261,13 @@ a {
 
 .team__item {
     width: 25%;
+    padding: 0 15px;
 }
 
 .team__photo {
-    width: 270px;
-    height: 270px;
-    background: #6c7279;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .team__title {
@@ -475,3 +473,91 @@ a {
 .copyright__author {
     color: var(--colorWhite);
 }
+
+.burger {
+    display: none;
+    padding: 9px 2px;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.burger__item {
+    display: block;
+    width: 28px;
+    height: 3px;
+
+    background-color: var(--colorWhite);
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: var(--colorWhite);
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item:before {
+    top: -8px;
+}
+
+.burger__item:after {
+    bottom: -8px;
+}
+
+/* Media */
+
+@media (max-width: 991px) {
+
+    /* Nav */
+    .nav {
+        display: none;
+    }
+
+    /* Burger */
+    .burger {
+        display: block;
+    }
+
+    /* Intro */
+    .intro__title {
+        font-size: 40px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    /* Intro */
+    .intro {
+        height: auto;
+        padding-top: 130px;
+        padding-bottom: 30px;
+    }
+
+    .intro__title {
+        font-size: 30px;
+    }
+
+    .intro__subtitle {
+        font-size: 16px;
+    }
+
+    .btn--red {
+        margin-top: 30px;
+    }
+
+}
+
+
