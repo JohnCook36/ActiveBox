@@ -106,7 +106,7 @@ a {
     justify-content: center;
     height: 750px;
     padding-top: 100px;
-    background: var(--colorBackgroundHeader) url("img/intro-bg.jpg") center no-repeat;
+    background: var(--colorBackgroundHeader) url("../img/intro-bg.jpg") center no-repeat;
     background-size: cover;
 }
 
